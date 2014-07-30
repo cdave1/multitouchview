@@ -38,7 +38,7 @@
  3. This notice may not be removed or altered from any source distribution.
  */
 
-#import "MultiTouchScreen.h"
+#import "MultiTouchView.h"
 
 id idFrame;
 
@@ -54,7 +54,7 @@ int GetTouchCount()
 }
 
 
-@interface MultiTouchScreen (Private)
+@interface MultiTouchView (Private)
 
 - (void)LoadTouches:(NSSet *)touches;
 - (void)StoreTouchInfo:(UITouch *)touch;
@@ -62,7 +62,7 @@ int GetTouchCount()
 @end
 
 
-@implementation MultiTouchScreen
+@implementation MultiTouchView
 
 @synthesize renderLock;
 

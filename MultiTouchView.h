@@ -34,17 +34,11 @@
  3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef MULTI_TOUCH_SCREEN_H
-#define MULTI_TOUCH_SCREEN_H
-
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
 // Uncomment this line to enable debug logging messages.
 //#define MULTI_TOUCH_SCREEN_DEBUG
-
-
-@class MultiTouchScreen;
 
 const int kMultiTouchMaxEntries = 10;
 const int kTouchPositionsBufferSize = 8;
@@ -84,7 +78,7 @@ typedef struct touchSlot
 } touchInfo_t;
 
 
-@interface MultiTouchScreen : GLKView
+@interface MultiTouchView : GLKView
 {
 @private
 	int TouchCount;
@@ -111,5 +105,3 @@ typedef struct touchSlot
 touchInfo_t * GetTouchValues();
 
 int GetTouchCount();
-
-#endif //MULTI_TOUCH_SCREEN_H

@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2D500B940D5A79C200DBA0E3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D500B920D5A79C200DBA0E3 /* OpenGLES.framework */; };
+		2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */; };
+		63266C261284CD2300143E65 /* point_glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63266C251284CD2300143E65 /* point_glow.png */; };
+		63AD97DD0FAA2A9F00A79D15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD97DC0FAA2A9F00A79D15 /* CoreGraphics.framework */; };
+		63B7CA6810A2386200E709A5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B7CA6710A2386200E709A5 /* Default.png */; };
+		E45D0B23198878CC0020E461 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E45D0B22198878CC0020E461 /* Default-568h@2x.png */; };
+		E45D0B27198879CD0020E461 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45D0B26198879CD0020E461 /* GLKit.framework */; };
+		E45D0B2C19887B380020E461 /* MultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B2919887B380020E461 /* MultiTouchView.mm */; };
+		E45D0B2D19887B380020E461 /* MultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B2B19887B380020E461 /* MultiTouchViewController.mm */; };
+		E45D0B3819887B740020E461 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B2F19887B740020E461 /* AppDelegate.mm */; };
+		E45D0B3919887B740020E461 /* glesGlue.c in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B3119887B740020E461 /* glesGlue.c */; };
+		E45D0B3A19887B740020E461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B3319887B740020E461 /* main.m */; };
+		E45D0B3B19887B740020E461 /* ExampleApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B3419887B740020E461 /* ExampleApp.cpp */; };
+		E45D0B3F19887D880020E461 /* TextureLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E45D0B3E19887D880020E461 /* TextureLoader.mm */; };
+		E479B7C81161D9660088CFA0 /* mousePoint.png in Resources */ = {isa = PBXBuildFile; fileRef = E479B7C71161D9660088CFA0 /* mousePoint.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* MultiTouchViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTouchViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D500B920D5A79C200DBA0E3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		63266C251284CD2300143E65 /* point_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = point_glow.png; path = Resources/point_glow.png; sourceTree = "<group>"; };
+		63AD97DC0FAA2A9F00A79D15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63B7CA6710A2386200E709A5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E45D0B22198878CC0020E461 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E45D0B26198879CD0020E461 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E45D0B2819887B380020E461 /* MultiTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiTouchView.h; path = ../MultiTouchView.h; sourceTree = "<group>"; };
+		E45D0B2919887B380020E461 /* MultiTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiTouchView.mm; path = ../MultiTouchView.mm; sourceTree = "<group>"; };
+		E45D0B2A19887B380020E461 /* MultiTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiTouchViewController.h; path = ../MultiTouchViewController.h; sourceTree = "<group>"; };
+		E45D0B2B19887B380020E461 /* MultiTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiTouchViewController.mm; path = ../MultiTouchViewController.mm; sourceTree = "<group>"; };
+		E45D0B2E19887B740020E461 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		E45D0B2F19887B740020E461 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Classes/AppDelegate.mm; sourceTree = "<group>"; };
+		E45D0B3119887B740020E461 /* glesGlue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glesGlue.c; sourceTree = "<group>"; };
+		E45D0B3219887B740020E461 /* glesGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glesGlue.h; sourceTree = "<group>"; };
+		E45D0B3319887B740020E461 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = "<group>"; };
+		E45D0B3419887B740020E461 /* ExampleApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExampleApp.cpp; path = Classes/ExampleApp.cpp; sourceTree = "<group>"; };
+		E45D0B3519887B740020E461 /* ExampleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleApp.h; path = Classes/ExampleApp.h; sourceTree = "<group>"; };
+		E45D0B3D19887D880020E461 /* TextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureLoader.h; sourceTree = "<group>"; };
+		E45D0B3E19887D880020E461 /* TextureLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextureLoader.mm; sourceTree = "<group>"; };
+		E479B7C71161D9660088CFA0 /* mousePoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mousePoint.png; path = Resources/mousePoint.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E45D0B27198879CD0020E461 /* GLKit.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2D500B940D5A79C200DBA0E3 /* OpenGLES.framework in Frameworks */,
+				2D500B9A0D5A79CF00DBA0E3 /* QuartzCore.framework in Frameworks */,
+				63AD97DD0FAA2A9F00A79D15 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* MultiTouchViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				E45D0B2819887B380020E461 /* MultiTouchView.h */,
+				E45D0B2919887B380020E461 /* MultiTouchView.mm */,
+				E45D0B2A19887B380020E461 /* MultiTouchViewController.h */,
+				E45D0B2B19887B380020E461 /* MultiTouchViewController.mm */,
+				63AF0F950F5F2F6800BF520B /* Application */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E45D0B22198878CC0020E461 /* Default-568h@2x.png */,
+				63266C251284CD2300143E65 /* point_glow.png */,
+				E479B7C71161D9660088CFA0 /* mousePoint.png */,
+				63B7CA6710A2386200E709A5 /* Default.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E45D0B26198879CD0020E461 /* GLKit.framework */,
+				63AD97DC0FAA2A9F00A79D15 /* CoreGraphics.framework */,
+				2D500B990D5A79CF00DBA0E3 /* QuartzCore.framework */,
+				2D500B920D5A79C200DBA0E3 /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63AF0F950F5F2F6800BF520B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E45D0B2E19887B740020E461 /* AppDelegate.h */,
+				E45D0B2F19887B740020E461 /* AppDelegate.mm */,
+				E45D0B3419887B740020E461 /* ExampleApp.cpp */,
+				E45D0B3519887B740020E461 /* ExampleApp.h */,
+				E45D0B3019887B740020E461 /* GL */,
+				E45D0B3319887B740020E461 /* main.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E45D0B3019887B740020E461 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				E45D0B3D19887D880020E461 /* TextureLoader.h */,
+				E45D0B3E19887D880020E461 /* TextureLoader.mm */,
+				E45D0B3119887B740020E461 /* glesGlue.c */,
+				E45D0B3219887B740020E461 /* glesGlue.h */,
+			);
+			name = GL;
+			path = Classes/GL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* MultiTouchViewExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MultiTouchViewExample" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiTouchViewExample;
+			productName = foo;
+			productReference = 1D6058910D05DD3D006BFB54 /* MultiTouchViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiTouchViewExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* MultiTouchViewExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B7CA6810A2386200E709A5 /* Default.png in Resources */,
+				E45D0B23198878CC0020E461 /* Default-568h@2x.png in Resources */,
+				E479B7C81161D9660088CFA0 /* mousePoint.png in Resources */,
+				63266C261284CD2300143E65 /* point_glow.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E45D0B3F19887D880020E461 /* TextureLoader.mm in Sources */,
+				E45D0B3B19887B740020E461 /* ExampleApp.cpp in Sources */,
+				E45D0B3A19887B740020E461 /* main.m in Sources */,
+				E45D0B3819887B740020E461 /* AppDelegate.mm in Sources */,
+				E45D0B2C19887B380020E461 /* MultiTouchView.mm in Sources */,
+				E45D0B2D19887B380020E461 /* MultiTouchViewController.mm in Sources */,
+				E45D0B3919887B740020E461 /* glesGlue.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				KEEP_PRIVATE_EXTERNS = NO;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MultiTouchViewExample;
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = MultiTouchViewExample;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MultiTouchViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiTouchViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

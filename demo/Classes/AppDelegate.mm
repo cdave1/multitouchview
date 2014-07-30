@@ -17,29 +17,26 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#import "Delegate.h"
+#import "AppDelegate.h"
+#include "ExampleApp.h"
 
-#include <sys/time.h>
-#include "QuartzCore/QuartzCore.h"
-#include "MultiTouchScreenController.h"
-
-static MultiTouchScreenController * multiTouchScreenController = NULL;
+static ExampleApp *exampleApp = NULL;
 
 static int frames;
 static CFTimeInterval CurrentTime;
 static CFTimeInterval LastFPSUpdate;
 
-@implementation AppController
+@implementation AppDelegate
 
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
     CGRect rect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:rect];
-    multiTouchScreen = [[MultiTouchScreen alloc] initWithFrame:rect];
+    multiTouchView = [[MultiTouchView alloc] initWithFrame:rect];
 
-    viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    viewController = [[MultiTouchViewController alloc] initWithNibName:nil bundle:nil];
     viewController.delegate = self;
-    [viewController.view addSubview:multiTouchScreen];
+    [viewController.view addSubview:multiTouchView];
 
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
@@ -48,12 +45,15 @@ static CFTimeInterval LastFPSUpdate;
     [[[NSBundle mainBundle] resourcePath] cStringUsingEncoding:NSASCIIStringEncoding];
 
     float scale = 1.0f;
-    multiTouchScreenController = new MultiTouchScreenController(bundleResourcePath, rect.size.width, rect.size.height, scale);
+    exampleApp = new ExampleApp(bundleResourcePath, rect.size.width, rect.size.height, scale);
 }
 
 
+- (void)glkViewControllerUpdate:(GLKViewController *)controller {}
+
+
 - (void) Update {
-    if (!multiTouchScreenController) return;
+    if (!viewController) return;
 
     /**
      * We get the accumulated touch information from the multi touch screen
@@ -82,14 +82,14 @@ static CFTimeInterval LastFPSUpdate;
 
                 if (touchPosition.TouchDown)
                 {
-                    multiTouchScreenController->HandleTouchDown(touchPosition.startPosition.x,
+                    exampleApp->HandleTouchDown(touchPosition.startPosition.x,
                                                                 touchPosition.startPosition.y,
                                                                 i);
                 }
 
                 if (touchPosition.TouchMoved)
                 {
-                    multiTouchScreenController->HandleTouchMoved(touchPosition.previousPosition.x,
+                    exampleApp->HandleTouchMoved(touchPosition.previousPosition.x,
                                                                  touchPosition.previousPosition.y,
                                                                  touchPosition.currentPosition.x,
                                                                  touchPosition.currentPosition.y,
@@ -98,7 +98,7 @@ static CFTimeInterval LastFPSUpdate;
                 
                 if (touchPosition.TouchUp)
                 {
-                    multiTouchScreenController->HandleTouchUp(touchPosition.endPosition.x,
+                    exampleApp->HandleTouchUp(touchPosition.endPosition.x,
                                                               touchPosition.endPosition.y,
                                                               i);
                 }
@@ -123,7 +123,7 @@ static CFTimeInterval LastFPSUpdate;
 
 
 - (void) Render {
-    multiTouchScreenController->Draw();
+    exampleApp->Draw();
 }
 
 

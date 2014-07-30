@@ -17,17 +17,11 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#include "MultiTouchScreenController.h"
+#include "ExampleApp.h"
 #include "TextureLoader.h"
 #import <string.h>
 
-static GLuint mouseTexture;
-static GLuint pathTexture;
-
-static float screenWidth, screenHeight, contentScaleFactor;
-
-
-MultiTouchScreenController::MultiTouchScreenController(const char* path, float width, float height, float scale)
+ExampleApp::ExampleApp(const char* path, float width, float height, float scale)
 {
     contentScaleFactor = scale;
     screenWidth = contentScaleFactor * width;
@@ -44,32 +38,32 @@ MultiTouchScreenController::MultiTouchScreenController(const char* path, float w
 }
 
 
-MultiTouchScreenController::~MultiTouchScreenController()
+ExampleApp::~ExampleApp()
 {
     // TODO: unload texture.
 }
 
 
-void MultiTouchScreenController::HandleTouchDown(const float x, const float y, const float touchId)
+void ExampleApp::HandleTouchDown(const float x, const float y, const float touchId)
 {
     AddTouchPoint(x, y, touchId);
 }
 
 
-void MultiTouchScreenController::HandleTouchMoved(const float prevX, const float prevY,
+void ExampleApp::HandleTouchMoved(const float prevX, const float prevY,
                                                   const float currX, const float currY, const float touchId)
 {
     AddTouchPoint(currX, currY, touchId);
 }
 
 
-void MultiTouchScreenController::HandleTouchUp(const float x, const float y, const float touchId)
+void ExampleApp::HandleTouchUp(const float x, const float y, const float touchId)
 {
     AddTouchPoint(x, y, touchId);
 }
 
 
-void MultiTouchScreenController::AddTouchPoint(const float x, const float y, const int touchId)
+void ExampleApp::AddTouchPoint(const float x, const float y, const int touchId)
 {
     // HACK -- hard coded colours depending on the touch id.
     color4_t color;
@@ -120,7 +114,7 @@ void MultiTouchScreenController::AddTouchPoint(const float x, const float y, con
 }
 
 
-void MultiTouchScreenController::Draw()
+void ExampleApp::Draw()
 {
     float halfScreenWidth = screenWidth * 0.5f;
     float halfScreenHeight = screenHeight * 0.5f;
@@ -143,7 +137,6 @@ void MultiTouchScreenController::Draw()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 
-
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, pathTexture);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
@@ -165,7 +158,6 @@ void MultiTouchScreenController::Draw()
         }
     }
 
-
     glDisable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
 
@@ -177,7 +169,7 @@ void MultiTouchScreenController::Draw()
 }
 
 
-void MultiTouchScreenController::DrawTouchPoint(const touchPoint_t& touch)
+void ExampleApp::DrawTouchPoint(const touchPoint_t& touch)
 {
     gGlBegin(GL_TRIANGLE_STRIP);
     gGlVertex3f(touch.position[0] - kTouchPointHalfWidth, touch.position[1] - kTouchPointHalfWidth, 0.0f);
@@ -196,5 +188,4 @@ void MultiTouchScreenController::DrawTouchPoint(const touchPoint_t& touch)
     gGlColor4f(touch.color[0], touch.color[1], touch.color[2], touch.color[3]);
     gGlTexCoord2f(1, 1);
     gGlEnd();
-    
 }

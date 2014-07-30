@@ -17,21 +17,21 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#import "ViewController.h"
+#import "MultiTouchViewController.h"
 
 static int frames;
 static CFTimeInterval CurrentTime;
 static CFTimeInterval LastFPSUpdate;
 static BOOL clientInitted = NO;
 
-@interface ViewController () {}
+@interface MultiTouchViewController () {}
 @property (strong, nonatomic) EAGLContext *context;
 - (void)setupGL;
 - (void)tearDownGL;
 @end
 
 
-@implementation ViewController
+@implementation MultiTouchViewController
 
 @synthesize delegate;
 

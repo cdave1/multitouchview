@@ -18,15 +18,17 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
-#import "MultiTouchScreen.h"
+#import "MultiTouchViewController.h"
+#import "MultiTouchView.h"
 
-@interface AppController : NSObject {
-    MultiTouchScreen *multiTouchScreen;
-    ViewController *viewController;
+@interface AppDelegate : NSObject <GLKViewControllerDelegate> {
+    MultiTouchView *multiTouchView;
+    MultiTouchViewController *viewController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)glkViewControllerUpdate:(GLKViewController *)controller;
 
 - (void) Update;
 - (void) ReportFPS:(NSNumber *)frames;

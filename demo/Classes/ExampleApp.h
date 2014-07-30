@@ -25,8 +25,8 @@
  * touch will be coloured red, the second orange, and so forth.
  */
 
-#ifndef MULTI_DEMO_CONTROLLER_H
-#define MULTI_DEMO_CONTROLLER_H
+#ifndef MULTI_TOUCH_EXAMPLE_APP_H
+#define MULTI_TOUCH_EXAMPLE_APP_H
 
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
@@ -46,12 +46,12 @@ typedef struct touchPoint
 touchPoint_t;
 
 
-class MultiTouchScreenController
+class ExampleApp
 {
 public:
-    MultiTouchScreenController(const char* path, float width, float height, float scale);
+    ExampleApp(const char* path, float width, float height, float scale);
 
-    ~MultiTouchScreenController();
+    ~ExampleApp();
 
     void HandleTouchDown(const float x, const float y, const float touchId);
 
@@ -69,6 +69,11 @@ private:
     touchPoint_t m_touchPoints[kTouchPointsCount];
     
     uint32_t m_touchPointsCount;
+
+    GLuint mouseTexture;
+    GLuint pathTexture;
+
+    float screenWidth, screenHeight, contentScaleFactor;
 };
 
 #endif

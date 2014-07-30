@@ -20,9 +20,9 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@interface ViewController : GLKViewController {
+@interface MultiTouchViewController : GLKViewController {
 }
 
-@property id delegate;
+//@property (assign) id delegate;
 
 @end
