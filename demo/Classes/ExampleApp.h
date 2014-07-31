@@ -33,7 +33,7 @@
 #include "glesGlue.h"
 
 #define kTouchPointsCount 2048
-#define kTouchPointHalfWidth 10.0f
+#define kTouchPointHalfWidth 20.0f
 #define kTouchPointStartingAge 10.0f
 
 typedef struct touchPoint
